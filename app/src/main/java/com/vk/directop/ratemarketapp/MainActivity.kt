@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavGraph
 import com.ramcosta.composedestinations.DestinationsNavHost
+import com.vk.directop.ratemarketapp.presentation.company_listings.NavGraphs
 import com.vk.directop.ratemarketapp.ui.theme.RateMarketAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    //DestinationsNavHost(navGraph = NavGraphs.root)
+                    DestinationsNavHost(navGraph = NavGraphs.root)
                 }
             }
         }
