@@ -2,8 +2,10 @@ package com.vk.directop.ratemarketapp.di
 
 import com.vk.directop.ratemarketapp.data.csv.CSVParser
 import com.vk.directop.ratemarketapp.data.csv.CompanyListingsParser
+import com.vk.directop.ratemarketapp.data.csv.IntradayParser
 import com.vk.directop.ratemarketapp.data.repository.StockRepositoryImpl
 import com.vk.directop.ratemarketapp.domain.model.CompanyListing
+import com.vk.directop.ratemarketapp.domain.model.IntradayInfo
 import com.vk.directop.ratemarketapp.domain.repository.StockRepository
 import dagger.Binds
 import dagger.Module
@@ -20,6 +22,12 @@ abstract class RepositoryModule {
     abstract fun bindCompanyListingsParser(
         companyListingsParser: CompanyListingsParser
     ): CSVParser<CompanyListing>
+
+    @Binds
+    @Singleton
+    abstract fun bindIntradayInfoParser(
+        intradayInfoParser: IntradayParser
+    ): CSVParser<IntradayInfo>
 
     @Binds
     @Singleton
